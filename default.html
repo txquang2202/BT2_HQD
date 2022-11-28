@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/default.css">
+    <title>Nhóm HQD</title>
+</head>
+</head>
+
+<body>
+    <div class="wel">
+        <div class="top">
+            <h1>WELCOME TO HQD TEAM</h1>
+        </div>
+    </div>
+    <h2>- GROUP MEMBERS IMAGES -</h2>
+    <div class="image">
+        <div id="photos">
+            <img src="./images/HQD.jpg" alt="Workplace" usemap="#workmap" width="1000" height="379">
+            <map name="workmap">
+                <area shape="rect" coords="119,110,215,345" alt="Hân" href="./members/20127153/20127153.html">
+                <area shape="rect" coords="470,265,550,360" alt="Duy" href="./members/20127145/20127145.html">
+                <area shape="rect" coords="675,34,1080,378" alt="Quang" href="./members/20127608/20127608.html">
+            </map>
+        </div>
+    </div>
+    <div class="bot">
+        <h2>- GROUP INFORMATION -</h2>
+        <table>
+            <tr>
+                <th>MSSV</th>
+                <th>Name</th>
+                <th>Role</th>
+            </tr>
+            <tr>
+                <td>20127153</td>
+                <td>Mai Trần Gia Hân</td>
+                <td>Leader</td>
+            </tr>
+            <tr>
+                <td>20127145</td>
+                <td>Hồ Quốc Duy</td>
+                <td>Member</td>
+            </tr>
+            <tr>
+                <td>20127608</td>
+                <td>Trần Xuân Quang</td>
+                <td>Member</td>
+            </tr>
+        </table>
+    </div>
+    <h3 class="main-footer">"Talent wins games, but teamwork and intelligence win championships." – Michael Jordan</h3>
+
+</body>
+<script>
+    function getMousePosition(photo, event) {
+        let rect = photo.getBoundingClientRect();
+        let x = event.clientX - rect.left;
+        let y = event.clientY - rect.top;
+        console.log("Coordinate x: " + x,
+            "Coordinate y: " + y);
+    }
+
+    let photoElem = document.querySelector("#photos");
+
+    photoElem.addEventListener("mousedown", function (e) {
+        getMousePosition(photoElem, e);
+    });
+</script>
+
+</html>
